@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { pdf } from '@react-pdf/renderer';
-import { HiDownload } from 'react-icons/hi';
+import { HiDownload, HiExternalLink } from 'react-icons/hi';
 import ResumePDF from '../pdf/ResumePDF';
 import { resumeData } from '../../data/resume';
 
@@ -36,15 +36,29 @@ const DownloadResumeButton = ({ className = '' }) => {
   };
 
   return (
-    <button
-      onClick={handleDownload}
-      disabled={isGenerating}
-      className={`inline-flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 ${className}`}
-      aria-label="Download Resume"
-    >
-      <HiDownload className="text-xl" />
-      <span>{isGenerating ? 'Generating...' : 'Download Resume'}</span>
-    </button>
+    <div className={`inline-flex gap-3 ${className}`}>
+      <button
+        onClick={handleDownload}
+        disabled={isGenerating}
+        className="inline-flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+        aria-label="Download Resume"
+      >
+        <HiDownload className="text-xl" />
+        <span>{isGenerating ? 'Generating...' : 'Download Resume'}</span>
+      </button>
+      {import.meta.env.DEV && (
+        <a
+          href="/?preview=resume"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-secondary hover:bg-secondary/90 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+          aria-label="Preview Resume"
+        >
+          <HiExternalLink className="text-xl" />
+          <span>Live Preview</span>
+        </a>
+      )}
+    </div>
   );
 };
 

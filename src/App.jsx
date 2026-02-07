@@ -7,8 +7,17 @@ import Projects from './components/sections/Projects'
 import Skills from './components/sections/Skills'
 import Contact from './components/sections/Contact'
 import ScrollToTop from './components/ui/ScrollToTop'
+import ResumePreview from './components/pdf/ResumePreview'
 
 function App() {
+  // Check for resume preview mode via URL parameter (dev only)
+  const isPreviewMode = import.meta.env.DEV &&
+    new URLSearchParams(window.location.search).get('preview') === 'resume';
+
+  if (isPreviewMode) {
+    return <ResumePreview />;
+  }
+
   return (
     <ThemeProvider>
       <div className="bg-light-bg dark:bg-dark-bg text-light-text-primary dark:text-dark-text-primary min-h-screen antialiased">

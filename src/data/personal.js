@@ -1,9 +1,10 @@
 export const personalInfo = {
-  name: "Victor Nguyen",
+  name: "Nguyễn Văn Đạt",
   title: "Full Stack Product Software Engineer",
   tagline: "Building modern web applications with cutting-edge technologies",
-  email: "Dativerse@gmail.com",
-  location: "Dubai",
+  email: "dativerse@gmail.com",
+  phone: "+84 775702201",
+  location: "Ho Chi Minh, Vietnam",
   bio: [
     "I'm a professional engineer specialized in delivering end-to-end solutions with cost efficiency at the forefront. I architect scalable web applications that maximize value while minimizing overhead.",
     "My expertise spans the entire stack, enabling strategic decisions that reduce costs without compromising quality. I leverage the right tools to eliminate complexity and deliver powerful, economical solutions.",
@@ -11,9 +12,9 @@ export const personalInfo = {
   ],
   resumeUrl: "/resume.pdf",
   social: {
-    github: "https://github.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourusername",
+    github: "https://github.com/Dativerse",
+    linkedin: "https://www.linkedin.com/in/envidat/",
     twitter: "https://twitter.com/yourusername",
-    email: "mailto:Dativerse@gmail.com"
+    email: "mailto:dativerse@gmail.com"
   }
 }
