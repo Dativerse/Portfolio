@@ -1,6 +1,6 @@
 export const personalInfo = {
   name: "Victor Nguyen",
-  title: "Full Stack Software Engineer",
+  title: "Full Stack Product Software Engineer",
   tagline: "Building modern web applications with cutting-edge technologies",
   email: "Dativerse@gmail.com",
   location: "Dubai",

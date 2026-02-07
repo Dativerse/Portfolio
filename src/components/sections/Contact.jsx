@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaEnvelope, FaTwitter } from 'react-icons/fa'
 import AnimatedSection from '../ui/AnimatedSection'
+import DownloadResumeButton from '../ui/DownloadResumeButton'
 import { personalInfo } from '../../data/personal'
 
 const Contact = () => {
@@ -87,13 +88,7 @@ const Contact = () => {
               >
                 <span className="relative z-10">Send Email</span>
               </a>
-              <a
-                href={personalInfo.resumeUrl || '#'}
-                download
-                className="btn-secondary"
-              >
-                Download Resume
-              </a>
+              <DownloadResumeButton className="!bg-transparent border-2 border-primary text-primary hover:!bg-primary hover:text-white dark:border-primary-light dark:text-primary-light dark:hover:!bg-primary-light dark:hover:text-dark-bg" />
             </div>
           </div>
         </AnimatedSection>

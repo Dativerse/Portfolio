@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { FaChevronDown, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import { personalInfo } from '../../data/personal'
+import DownloadResumeButton from '../ui/DownloadResumeButton'
 
 const Hero = () => {
   const scrollToSection = (sectionId) => {
@@ -116,6 +117,7 @@ const Hero = () => {
             >
               View Solutions
             </button>
+            <DownloadResumeButton />
           </motion.div>
 
           {/* Social Links */}

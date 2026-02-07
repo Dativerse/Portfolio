@@ -1,5 +1,6 @@
-import { FaDownload, FaAward, FaBriefcase } from 'react-icons/fa'
+import { FaAward, FaBriefcase } from 'react-icons/fa'
 import AnimatedSection from '../ui/AnimatedSection'
+import DownloadResumeButton from '../ui/DownloadResumeButton'
 import { personalInfo } from '../../data/personal'
 
 const About = () => {
@@ -66,7 +67,7 @@ const About = () => {
                     </div>
                     <div>
                       <h3 className="text-3xl font-bold text-primary dark:text-primary-light mb-1">
-                        5+
+                        3+
                       </h3>
                       <p className="text-light-text-tertiary dark:text-dark-text-tertiary text-sm">
                         Years Experience
@@ -82,7 +83,7 @@ const About = () => {
                     </div>
                     <div>
                       <h3 className="text-3xl font-bold text-accent-purple mb-1">
-                        50+
+                        10+
                       </h3>
                       <p className="text-light-text-tertiary dark:text-dark-text-tertiary text-sm">
                         Projects Completed
@@ -94,14 +95,7 @@ const About = () => {
 
               {/* Download Resume */}
               <div className="mt-10">
-                <a
-                  href={personalInfo.resumeUrl}
-                  download
-                  className="inline-flex items-center gap-3 btn-primary group"
-                >
-                  <FaDownload className="w-4 h-4 group-hover:animate-bounce" />
-                  <span className="relative z-10">Download Resume</span>
-                </a>
+                <DownloadResumeButton />
               </div>
             </div>
           </AnimatedSection>
