@@ -92,7 +92,7 @@ export const resumeData = {
       ]
     },
     {
-      title: "License Admin Portal",
+      title: "Licensee Admin Portal",
       description: "High-performance admin website utilizing JavaScript and .NET",
       technologies: [".NET Framework", ".NET 6", "React", "Webpack", "jQuery"],
       period: "Oct 2023 - Aug 2024",
