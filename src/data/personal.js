@@ -10,7 +10,7 @@ export const personalInfo = {
     "My expertise spans the entire stack, enabling strategic decisions that reduce costs without compromising quality. I leverage the right tools to eliminate complexity and deliver powerful, economical solutions.",
     "I build maintainable, production-ready applications that solve real business problems efficiently. From infrastructure optimization to scalable architecture, I deliver maximum impact within budget."
   ],
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/resume.pdf", 
   social: {
     github: "https://github.com/Dativerse",
     linkedin: "https://www.linkedin.com/in/envidat/",

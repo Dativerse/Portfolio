@@ -323,13 +323,13 @@ const ResumePDF = ({ data }) => (
               LinkedIn
             </Link>
           </View>
-          <Text style={styles.contactSeparator}>|</Text>
+          {/* <Text style={styles.contactSeparator}>|</Text>
           <View style={styles.iconLink}>
             <GitHubIcon />
             <Link src={data.personal.github} style={styles.contactLink}>
               GitHub
             </Link>
-          </View>
+          </View> */}
           {data.personal.phone && (
             <>
               <Text style={styles.contactSeparator}>|</Text>
@@ -349,6 +349,14 @@ const ResumePDF = ({ data }) => (
           )}
         </View>
       </View>
+
+      {/* Summary Section */}
+      {data.summary && (
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Summary</Text>
+          <Text style={{ fontSize: 10, color: '#000000', lineHeight: 1.4 }}>{data.summary}</Text>
+        </View>
+      )}
 
       {/* Education Section */}
       <View style={styles.section}>
