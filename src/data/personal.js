@@ -12,9 +12,9 @@ export const personalInfo = {
   ],
   resumeUrl: "/resume.pdf", 
   social: {
-    github: "https://github.com/Dativerse",
+    github: null,
     linkedin: "https://www.linkedin.com/in/envidat/",
-    twitter: "https://twitter.com/yourusername",
+    twitter: null,
     email: "mailto:dativerse@gmail.com"
   }
 }

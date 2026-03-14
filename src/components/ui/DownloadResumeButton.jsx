@@ -6,6 +6,7 @@ import { resumeData } from '../../data/resume';
 
 const DownloadResumeButton = ({ className = '' }) => {
   const [isGenerating, setIsGenerating] = useState(false);
+  const showPreview = import.meta.env.VITE_SHOW_RESUME_PREVIEW === 'true';
 
   const handleDownload = async () => {
     try {
@@ -35,18 +36,21 @@ const DownloadResumeButton = ({ className = '' }) => {
     }
   };
 
+  const defaultButtonClass = "inline-flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100";
+  const buttonClass = className ? `inline-flex items-center gap-2 px-6 py-3 font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 ${className}` : defaultButtonClass;
+
   return (
-    <div className={`inline-flex gap-3 ${className}`}>
+    <>
       <button
         onClick={handleDownload}
         disabled={isGenerating}
-        className="inline-flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+        className={buttonClass}
         aria-label="Download Resume"
       >
         <HiDownload className="text-xl" />
         <span>{isGenerating ? 'Generating...' : 'Download Resume'}</span>
       </button>
-      {import.meta.env.DEV && (
+      {showPreview && (
         <a
           href="/?preview=resume"
           target="_blank"
@@ -58,7 +62,7 @@ const DownloadResumeButton = ({ className = '' }) => {
           <span>Live Preview</span>
         </a>
       )}
-    </div>
+    </>
   );
 };
 

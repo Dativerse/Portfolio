@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FaChevronDown, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
+import { FaChevronDown, FaLinkedin, FaEnvelope, FaCode } from 'react-icons/fa'
 import { personalInfo } from '../../data/personal'
 import DownloadResumeButton from '../ui/DownloadResumeButton'
 
@@ -33,20 +33,25 @@ const Hero = () => {
 
       <div className="container-custom px-4 md:px-8 relative z-10">
         <div className="flex flex-col items-center text-center">
-          {/* Profile Image with Glow */}
+          {/* Profile Avatar with Animated Gradient */}
           <motion.div
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6, type: "spring", bounce: 0.4 }}
-            className="mb-8 relative"
+            className="mb-8 relative group"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent-purple to-accent-pink rounded-full blur-2xl opacity-30 animate-pulse-slow" />
-            <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-white/20 dark:border-white/10 overflow-hidden shadow-premium-lg backdrop-blur-sm">
-              <img
-                src="https://via.placeholder.com/200?text=Profile"
-                alt={personalInfo.name}
-                className="w-full h-full object-cover"
-              />
+            {/* Outer glow */}
+            <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent-purple to-accent-pink rounded-full blur-2xl opacity-40 animate-pulse-slow group-hover:opacity-60 transition-opacity duration-500" />
+
+            {/* Animated gradient avatar */}
+            <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full p-1 bg-gradient-to-r from-primary via-accent-purple to-accent-pink animate-gradient-rotate shadow-premium-lg">
+              <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/20 via-accent-purple/30 to-accent-pink/20 dark:from-primary/30 dark:via-accent-purple/40 dark:to-accent-pink/30 backdrop-blur-sm flex items-center justify-center overflow-hidden">
+                {/* Inner animated gradient */}
+                <div className="absolute inset-2 rounded-full bg-gradient-to-tr from-primary via-accent-purple to-accent-pink opacity-20 animate-spin-slow" />
+
+                {/* Icon */}
+                <FaCode className="relative text-5xl md:text-6xl text-primary dark:text-primary-light drop-shadow-lg" />
+              </div>
             </div>
           </motion.div>
 
@@ -128,15 +133,7 @@ const Hero = () => {
             className="flex items-center gap-4"
           >
             <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 rounded-xl bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border hover:border-primary/50 dark:hover:border-primary/50 hover:bg-primary/5 dark:hover:bg-primary/10 transition-all duration-200 group"
-            >
-              <FaGithub className="w-5 h-5 text-light-text-secondary dark:text-dark-text-secondary group-hover:text-primary dark:group-hover:text-primary-light transition-colors" />
-            </a>
-            <a
-              href="https://linkedin.com"
+              href={personalInfo.social.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-xl bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border hover:border-primary/50 dark:hover:border-primary/50 hover:bg-primary/5 dark:hover:bg-primary/10 transition-all duration-200 group"
@@ -144,7 +141,7 @@ const Hero = () => {
               <FaLinkedin className="w-5 h-5 text-light-text-secondary dark:text-dark-text-secondary group-hover:text-primary dark:group-hover:text-primary-light transition-colors" />
             </a>
             <a
-              href="mailto:contact@example.com"
+              href={personalInfo.social.email}
               className="p-3 rounded-xl bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border hover:border-primary/50 dark:hover:border-primary/50 hover:bg-primary/5 dark:hover:bg-primary/10 transition-all duration-200 group"
             >
               <FaEnvelope className="w-5 h-5 text-light-text-secondary dark:text-dark-text-secondary group-hover:text-primary dark:group-hover:text-primary-light transition-colors" />

@@ -1,4 +1,4 @@
-import { FaShoppingCart, FaRocket, FaChartLine, FaUsers, FaLock, FaMobile } from 'react-icons/fa'
+import { FaShoppingCart, FaRocket, FaCogs, FaUsers, FaLock, FaMobile } from 'react-icons/fa'
 
 export const solutions = [
   {
@@ -22,7 +22,7 @@ export const solutions = [
     description: 'Develop interactive applications with live updates, chat systems, and collaborative features. WebSocket-based architecture for instant data synchronization.',
     icon: FaRocket,
     color: 'bg-gradient-to-br from-accent-cyan to-blue-600 text-white',
-    stack: ['Vue.js', 'Socket.io', 'Express', 'PostgreSQL', 'Docker', 'Nginx'],
+    stack: ['React', 'Socket.io', 'Express', 'PostgreSQL', 'Docker', 'Nginx'],
     features: [
       'Live chat and messaging systems',
       'Real-time notifications and alerts',
@@ -33,17 +33,17 @@ export const solutions = [
   },
   {
     id: 3,
-    title: 'Data Dashboards & Analytics',
-    description: 'Create powerful data visualization platforms with interactive charts, real-time metrics, and custom reporting. Transform complex data into actionable insights.',
-    icon: FaChartLine,
+    title: 'Back-Office Systems',
+    description: 'Build internal admin panels and management tools for business operations. Streamline workflows with custom dashboards, CRUD interfaces, and automation.',
+    icon: FaCogs,
     color: 'bg-gradient-to-br from-accent-purple to-accent-pink text-white',
-    stack: ['React', 'D3.js', 'GraphQL', 'Node.js', 'TimescaleDB', 'Redis'],
+    stack: ['React', '.NET', 'PostgreSQL', 'Redis', 'Docker', 'Kubernetes'],
     features: [
-      'Interactive data visualizations',
-      'Custom report generation',
-      'Real-time metrics and KPIs',
-      'Data export and API integration',
-      'Role-based access control'
+      'Admin dashboards and control panels',
+      'User and role management systems',
+      'Internal workflow automation',
+      'Reporting and data exports',
+      'Audit logging and activity tracking'
     ]
   },
   {
@@ -63,17 +63,17 @@ export const solutions = [
   },
   {
     id: 5,
-    title: 'RESTful & GraphQL APIs',
-    description: 'Design and develop robust APIs with proper documentation, versioning, and rate limiting. Build the backbone for mobile apps and third-party integrations.',
+    title: 'Scalable Microservices',
+    description: 'Architect and build distributed systems with independent, loosely-coupled services. Design for high availability, fault tolerance, and horizontal scaling.',
     icon: FaUsers,
     color: 'bg-gradient-to-br from-green-600 to-teal-600 text-white',
-    stack: ['Express', 'GraphQL', 'REST', 'Swagger', 'MongoDB', 'Docker'],
+    stack: ['.NET', 'Docker', 'Kubernetes', 'RabbitMQ', 'Redis', 'PostgreSQL'],
     features: [
-      'RESTful API design and implementation',
-      'GraphQL schema design and resolvers',
-      'API documentation with Swagger',
-      'Rate limiting and throttling',
-      'Comprehensive error handling'
+      'Service decomposition and domain boundaries',
+      'API gateway and service discovery',
+      'Message queues and event-driven architecture',
+      'Containerized deployment with orchestration',
+      'Distributed caching and data consistency'
     ]
   },
   {

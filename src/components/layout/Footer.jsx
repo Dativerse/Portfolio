@@ -1,13 +1,11 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaHeart } from 'react-icons/fa'
+import { FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import { personalInfo } from '../../data/personal'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   const socialLinks = [
-    { icon: FaGithub, url: personalInfo.social.github, label: 'GitHub' },
     { icon: FaLinkedin, url: personalInfo.social.linkedin, label: 'LinkedIn' },
-    { icon: FaTwitter, url: personalInfo.social.twitter, label: 'Twitter' },
     { icon: FaEnvelope, url: personalInfo.social.email, label: 'Email' }
   ]
 

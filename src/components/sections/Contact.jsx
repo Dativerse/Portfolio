@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaEnvelope, FaTwitter } from 'react-icons/fa'
+import { FaLinkedin, FaEnvelope } from 'react-icons/fa'
 import AnimatedSection from '../ui/AnimatedSection'
 import DownloadResumeButton from '../ui/DownloadResumeButton'
 import { personalInfo } from '../../data/personal'
@@ -6,26 +6,14 @@ import { personalInfo } from '../../data/personal'
 const Contact = () => {
   const socialLinks = [
     {
-      icon: FaGithub,
-      url: personalInfo.social.github || 'https://github.com',
-      label: 'GitHub',
-      color: 'from-gray-700 to-gray-900'
-    },
-    {
       icon: FaLinkedin,
-      url: personalInfo.social.linkedin || 'https://linkedin.com',
+      url: personalInfo.social.linkedin,
       label: 'LinkedIn',
       color: 'from-blue-600 to-blue-800'
     },
     {
-      icon: FaTwitter,
-      url: personalInfo.social.twitter || 'https://twitter.com',
-      label: 'Twitter',
-      color: 'from-sky-500 to-sky-700'
-    },
-    {
       icon: FaEnvelope,
-      url: `mailto:${personalInfo.email}`,
+      url: personalInfo.social.email,
       label: 'Email',
       color: 'from-primary to-accent-purple'
     }

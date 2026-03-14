@@ -7,7 +7,7 @@ export const resumeData = {
     email: personalInfo.email,
     phone: personalInfo.phone,
     location: personalInfo.location,
-    github: personalInfo.social.github,
+    github: null,
     linkedin: personalInfo.social.linkedin,
     website: null,
   },

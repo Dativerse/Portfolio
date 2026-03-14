@@ -1,4 +1,4 @@
-import { FaAward, FaBriefcase } from 'react-icons/fa'
+import { FaAward, FaBriefcase, FaLaptopCode } from 'react-icons/fa'
 import AnimatedSection from '../ui/AnimatedSection'
 import DownloadResumeButton from '../ui/DownloadResumeButton'
 import { personalInfo } from '../../data/personal'
@@ -26,18 +26,21 @@ const About = () => {
         </AnimatedSection>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Image */}
+          {/* Animated Avatar */}
           <AnimatedSection animation="slide-left">
-            <div className="relative">
+            <div className="relative group">
               {/* Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent-purple/20 to-accent-pink/20 rounded-3xl blur-2xl opacity-50" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-accent-purple/30 to-accent-pink/30 rounded-3xl blur-2xl opacity-50 group-hover:opacity-70 transition-opacity duration-500" />
 
-              <div className="relative aspect-square rounded-3xl overflow-hidden border border-light-border dark:border-dark-border shadow-premium-lg">
-                <img
-                  src="https://via.placeholder.com/500?text=About+Me"
-                  alt="About me"
-                  className="w-full h-full object-cover"
-                />
+              {/* Animated gradient container */}
+              <div className="relative aspect-square rounded-3xl p-1 bg-gradient-to-br from-primary via-accent-purple to-accent-pink animate-gradient-rotate shadow-premium-lg">
+                <div className="w-full h-full rounded-[1.35rem] bg-gradient-to-br from-primary/10 via-accent-purple/20 to-accent-pink/10 dark:from-primary/20 dark:via-accent-purple/30 dark:to-accent-pink/20 backdrop-blur-sm flex items-center justify-center overflow-hidden">
+                  {/* Inner animated gradient */}
+                  <div className="absolute inset-4 rounded-2xl bg-gradient-to-tr from-primary via-accent-purple to-accent-pink opacity-10 animate-spin-slow" />
+
+                  {/* Icon */}
+                  <FaLaptopCode className="relative text-8xl md:text-9xl text-primary dark:text-primary-light drop-shadow-lg" />
+                </div>
               </div>
 
               {/* Decorative Elements */}
