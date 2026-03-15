@@ -24,7 +24,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Copyright */}
           <div className="font-mono text-xs text-light-text-tertiary dark:text-slate-400">
-            <span className="text-accent">&copy;</span> {currentYear} {personalInfo.name}
+            <span className="text-accent-light dark:text-accent-dark">&copy;</span> {currentYear} {personalInfo.name}
           </div>
 
           {/* Social Links */}
@@ -35,7 +35,7 @@ const Footer = () => {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 border border-light-border dark:border-dark-border hover:border-accent hover:text-accent transition-colors text-light-text-secondary dark:text-slate-400"
+                className="p-2 border border-light-border dark:border-dark-border hover:border-accent-light hover:text-accent-light dark:hover:border-accent-dark dark:hover:text-accent-dark transition-colors text-light-text-secondary dark:text-slate-400"
                 aria-label={social.label}
               >
                 <social.icon className="w-3 h-3" />
@@ -46,7 +46,7 @@ const Footer = () => {
           {/* Back to top */}
           <button
             onClick={scrollToTop}
-            className="font-mono text-xs text-light-text-tertiary dark:text-slate-400 hover:text-accent transition-colors"
+            className="font-mono text-xs text-light-text-tertiary dark:text-slate-400 hover:text-accent-light dark:hover:text-accent-dark transition-colors"
           >
             scroll_to_top()
           </button>

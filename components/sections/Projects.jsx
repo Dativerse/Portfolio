@@ -38,7 +38,7 @@ const Projects = () => {
         <AnimatedSection animation="fade-up" delay={0.4}>
           <div className="mt-12 pt-8 border-t border-light-border dark:border-dark-border">
             <div className="flex items-center justify-center gap-2 font-mono text-xs text-light-text-tertiary dark:text-slate-400">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-slow"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-accent-light dark:bg-accent-dark animate-pulse-slow"></span>
               <span>all systems production-ready</span>
             </div>
           </div>

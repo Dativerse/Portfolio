@@ -32,7 +32,7 @@ const SolutionCard = ({ solution, index }) => {
       {/* Header */}
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-3">
-          <span className="font-mono text-accent text-sm">
+          <span className="font-mono text-accent-light dark:text-accent-dark text-sm">
             [{String(index + 1).padStart(2, '0')}]
           </span>
           <div className="p-2 border border-light-border dark:border-dark-border">
@@ -57,8 +57,8 @@ const SolutionCard = ({ solution, index }) => {
       {/* Architecture diagram - Tech Stack */}
       <div className="mb-4">
         <div className="flex items-center gap-2 mb-3">
-          <span className="w-4 h-px bg-accent"></span>
-          <span className="font-mono text-xs text-accent uppercase tracking-wider">stack</span>
+          <span className="w-4 h-px bg-accent-light dark:bg-accent-dark"></span>
+          <span className="font-mono text-xs text-accent-light dark:text-accent-dark uppercase tracking-wider">stack</span>
         </div>
 
         <div className="relative">
@@ -76,9 +76,9 @@ const SolutionCard = ({ solution, index }) => {
 
                 {/* Tooltip */}
                 {hoveredTech === tech && techExplanations[tech] && (
-                  <div className="absolute z-10 bottom-full left-0 mb-2 px-2 py-1 bg-dark-card border border-accent/30 text-accent text-xs font-mono whitespace-nowrap">
+                  <div className="absolute z-10 bottom-full left-0 mb-2 px-2 py-1 bg-light-card dark:bg-dark-card border border-accent-light/30 dark:border-accent-dark/30 text-accent-light dark:text-accent-dark text-xs font-mono whitespace-nowrap">
                     {techExplanations[tech]}
-                    <div className="absolute top-full left-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-accent/30"></div>
+                    <div className="absolute top-full left-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-accent-light/30 dark:border-t-accent-dark/30"></div>
                   </div>
                 )}
               </div>
@@ -97,7 +97,7 @@ const SolutionCard = ({ solution, index }) => {
         <ul className="space-y-1.5">
           {solution.features.map((feature, i) => (
             <li key={i} className="flex items-start gap-2 text-xs text-light-text-secondary dark:text-slate-400 font-mono">
-              <span className="text-accent mt-0.5">→</span>
+              <span className="text-accent-light dark:text-accent-dark mt-0.5">→</span>
               <span>{feature}</span>
             </li>
           ))}

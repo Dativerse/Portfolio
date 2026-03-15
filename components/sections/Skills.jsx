@@ -28,7 +28,7 @@ const Skills = () => {
               <div key={categoryIndex} className="card-blueprint">
                 {/* Category header */}
                 <div className="flex items-center gap-3 mb-4 pb-4 border-b border-light-border dark:border-dark-border">
-                  <span className="font-mono text-accent text-sm">
+                  <span className="font-mono text-accent-light dark:text-accent-dark text-sm">
                     [{String(categoryIndex + 1).padStart(2, '0')}]
                   </span>
                   <h3 className="font-mono font-semibold text-light-text-primary dark:text-slate-200">
@@ -61,12 +61,12 @@ const Skills = () => {
           <div className="mt-12 pt-8 border-t border-light-border dark:border-dark-border">
             <div className="flex items-center justify-center gap-4 font-mono text-xs text-light-text-tertiary dark:text-slate-400">
               <span className="flex items-center gap-2">
-                <span className="w-2 h-2 border border-accent"></span>
+                <span className="w-2 h-2 border border-accent-light dark:border-accent-dark"></span>
                 hover for details
               </span>
               <span className="text-light-border dark:text-dark-border">|</span>
               <span className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-accent/30"></span>
+                <span className="w-2 h-2 bg-accent-light/30 dark:bg-accent-dark/30"></span>
                 actively using
               </span>
             </div>

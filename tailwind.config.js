@@ -26,11 +26,11 @@ module.exports = {
         light: {
           bg: '#f8fafc',
           card: '#ffffff',
-          border: '#e2e8f0',
+          border: '#cbd5e1',
           text: {
             primary: '#0f172a',
-            secondary: '#475569',
-            tertiary: '#64748b'
+            secondary: '#334155',
+            tertiary: '#475569'
           }
         },
         // Dark mode (architect theme)
@@ -40,12 +40,17 @@ module.exports = {
           elevated: '#1d3461',
           border: '#233554',
           text: {
-            primary: '#ccd6f6',
-            secondary: '#8892b0',
+            primary: '#e2e8f0',
+            secondary: '#94a3b8',
             tertiary: '#64748b'
           }
         },
-        accent: '#64ffda'
+        // Theme-aware accent colors
+        accent: {
+          DEFAULT: '#64ffda',
+          light: '#0d9488',   // Teal-600 - readable on white
+          dark: '#5eead4'     // Teal-300 - bright for dark bg
+        }
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],

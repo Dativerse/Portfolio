@@ -75,10 +75,10 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 px-4 md:px-8">
           {/* Logo */}
           <button
-            className="font-mono text-sm text-light-text-primary dark:text-slate-200 cursor-pointer hover:text-accent transition-colors"
+            className="font-mono text-sm text-light-text-primary dark:text-slate-200 cursor-pointer hover:text-accent-light dark:hover:text-accent-dark transition-colors"
             onClick={() => scrollToSection('home')}
           >
-            <span className="text-accent">~/</span>portfolio
+            <span className="text-accent-light dark:text-accent-dark">~/</span>portfolio
           </button>
 
           {/* Desktop Navigation */}
@@ -89,8 +89,8 @@ const Navbar = () => {
                 onClick={() => scrollToSection(link.id)}
                 className={`px-3 py-1.5 font-mono text-sm transition-colors ${
                   activeSection === link.id
-                    ? 'text-accent'
-                    : 'text-light-text-secondary dark:text-slate-400 hover:text-accent'
+                    ? 'text-accent-light dark:text-accent-dark'
+                    : 'text-light-text-secondary dark:text-slate-400 hover:text-accent-light dark:hover:text-accent-dark'
                 }`}
               >
                 {activeSection === link.id ? `[${link.label}]` : link.label}
@@ -106,7 +106,7 @@ const Navbar = () => {
             <DarkModeToggle />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-light-text-secondary dark:text-slate-400 hover:text-accent transition-colors"
+              className="p-2 text-light-text-secondary dark:text-slate-400 hover:text-accent-light dark:hover:text-accent-dark transition-colors"
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? (
@@ -145,11 +145,11 @@ const Navbar = () => {
                     onClick={() => scrollToSection(link.id)}
                     className={`text-left px-3 py-2 font-mono text-sm transition-colors ${
                       activeSection === link.id
-                        ? 'text-accent'
+                        ? 'text-accent-light dark:text-accent-dark'
                         : 'text-light-text-secondary dark:text-slate-400'
                     }`}
                   >
-                    <span className="text-accent/60">&gt;</span> {link.label}
+                    <span className="text-accent-light/60 dark:text-accent-dark/60">&gt;</span> {link.label}
                   </button>
                 ))}
               </div>

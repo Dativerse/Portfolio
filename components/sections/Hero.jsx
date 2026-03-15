@@ -41,14 +41,14 @@ const Hero = () => {
                 />
               </div>
               {/* Status dot */}
-              <span className="absolute -bottom-1 -right-1 w-3 h-3 bg-accent border-2 border-light-bg dark:border-dark-bg rounded-full"></span>
+              <span className="absolute -bottom-1 -right-1 w-3 h-3 bg-accent-light dark:bg-accent-dark border-2 border-light-bg dark:border-dark-bg rounded-full"></span>
             </div>
 
             <div>
               <h1 className="text-xl md:text-2xl font-mono font-bold text-light-text-primary dark:text-slate-200">
                 {personalInfo.name}
               </h1>
-              <p className="font-mono text-sm text-accent">
+              <p className="font-mono text-sm text-accent-light dark:text-accent-dark">
                 {personalInfo.title}
               </p>
             </div>
@@ -72,17 +72,17 @@ const Hero = () => {
             className="flex items-center gap-6 mb-8 font-mono text-sm"
           >
             <div className="flex items-center gap-2">
-              <span className="text-accent">3+</span>
+              <span className="text-accent-light dark:text-accent-dark">3+</span>
               <span className="text-light-text-tertiary dark:text-slate-400">years exp</span>
             </div>
-            <span className="text-dark-border">|</span>
+            <span className="text-light-border dark:text-dark-border">|</span>
             <div className="flex items-center gap-2">
-              <span className="text-accent">10+</span>
+              <span className="text-accent-light dark:text-accent-dark">10+</span>
               <span className="text-light-text-tertiary dark:text-slate-400">projects</span>
             </div>
-            <span className="text-dark-border">|</span>
+            <span className="text-light-border dark:text-dark-border">|</span>
             <div className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-accent-light dark:bg-accent-dark animate-pulse"></span>
               <span className="text-light-text-tertiary dark:text-slate-400">available</span>
             </div>
           </motion.div>
@@ -109,14 +109,14 @@ const Hero = () => {
                 href={personalInfo.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 border border-light-border dark:border-dark-border hover:border-accent hover:text-accent transition-colors text-light-text-secondary dark:text-slate-400"
+                className="p-2 border border-light-border dark:border-dark-border hover:border-accent-light hover:text-accent-light dark:hover:border-accent-dark dark:hover:text-accent-dark transition-colors text-light-text-secondary dark:text-slate-400"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin className="w-4 h-4" />
               </a>
               <a
                 href={personalInfo.social.email}
-                className="p-2 border border-light-border dark:border-dark-border hover:border-accent hover:text-accent transition-colors text-light-text-secondary dark:text-slate-400"
+                className="p-2 border border-light-border dark:border-dark-border hover:border-accent-light hover:text-accent-light dark:hover:border-accent-dark dark:hover:text-accent-dark transition-colors text-light-text-secondary dark:text-slate-400"
                 aria-label="Email"
               >
                 <FaEnvelope className="w-4 h-4" />
@@ -133,7 +133,7 @@ const Hero = () => {
           >
             <button
               onClick={() => scrollToSection('skills')}
-              className="flex items-center gap-2 font-mono text-xs text-light-text-tertiary dark:text-slate-400 hover:text-accent transition-colors"
+              className="flex items-center gap-2 font-mono text-xs text-light-text-tertiary dark:text-slate-400 hover:text-accent-light dark:hover:text-accent-dark transition-colors"
             >
               <FaArrowDown className="w-3 h-3" />
               <span>scroll to explore</span>

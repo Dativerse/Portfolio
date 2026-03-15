@@ -9,7 +9,7 @@ const DarkModeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 border border-light-border dark:border-dark-border hover:border-accent hover:text-accent transition-colors text-light-text-secondary dark:text-slate-400"
+      className="p-2 border border-light-border dark:border-dark-border hover:border-accent-light hover:text-accent-light dark:hover:border-accent-dark dark:hover:text-accent-dark transition-colors text-light-text-secondary dark:text-slate-400"
       aria-label="Toggle dark mode"
     >
       {theme === 'dark' ? (

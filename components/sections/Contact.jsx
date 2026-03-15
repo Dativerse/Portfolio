@@ -47,11 +47,11 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="group card-blueprint flex items-center gap-4"
               >
-                <div className="p-3 border border-light-border dark:border-dark-border group-hover:border-accent transition-colors">
-                  <endpoint.icon className="w-5 h-5 text-light-text-secondary dark:text-slate-400 group-hover:text-accent transition-colors" />
+                <div className="p-3 border border-light-border dark:border-dark-border group-hover:border-accent-light dark:group-hover:border-accent-dark transition-colors">
+                  <endpoint.icon className="w-5 h-5 text-light-text-secondary dark:text-slate-400 group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors" />
                 </div>
                 <div className="font-mono">
-                  <div className="text-sm text-light-text-primary dark:text-slate-200 group-hover:text-accent transition-colors">
+                  <div className="text-sm text-light-text-primary dark:text-slate-200 group-hover:text-accent-light dark:group-hover:text-accent-dark transition-colors">
                     {endpoint.label}
                   </div>
                   <div className="text-xs text-light-text-tertiary dark:text-slate-400">
@@ -80,7 +80,7 @@ const Contact = () => {
         <AnimatedSection animation="fade-up" delay={0.6}>
           <div className="mt-12 pt-8 border-t border-light-border dark:border-dark-border">
             <div className="font-mono text-xs text-light-text-tertiary dark:text-slate-400">
-              <span className="text-accent">$</span> response_time: <span className="text-accent">&lt; 24h</span>
+              <span className="text-accent-light dark:text-accent-dark">$</span> response_time: <span className="text-accent-light dark:text-accent-dark">&lt; 24h</span>
             </div>
           </div>
         </AnimatedSection>
