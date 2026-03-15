@@ -12,8 +12,6 @@ export const solutions = [
       'Secure wallet and transaction processing',
       'Real-time event and probability data synchronization',
       'Market selection and session management',
-      'Backoffice and operator portals for platform operations',
-      'Scalable microservices architecture with event-driven processing'
     ]
   },
   {
@@ -28,7 +26,9 @@ export const solutions = [
       'Secure deposit and withdrawal flows',
       'Real-time balance and transaction updates',
       'Payment gateway integrations',
-      'Transaction history and reporting'
+      'Transaction history and reporting',
+      'Backoffice and operator portals for platform operations',
+      'Scalable microservices architecture with event-driven processing'
     ]
   },
   {

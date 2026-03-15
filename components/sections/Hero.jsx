@@ -3,8 +3,8 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { FaLinkedin, FaEnvelope, FaArrowDown } from 'react-icons/fa'
-import { HiDownload } from 'react-icons/hi'
 import { personalInfo } from '@/data/personal'
+import DownloadResumeButton from '@/components/ui/DownloadResumeButton'
 
 const Hero = () => {
   const scrollToSection = (sectionId) => {
@@ -101,6 +101,8 @@ const Hero = () => {
             <a href={`mailto:${personalInfo.email}`} className="btn-secondary">
               Contact
             </a>
+
+            <DownloadResumeButton />
 
             <div className="flex items-center gap-2 ml-2">
               <a
