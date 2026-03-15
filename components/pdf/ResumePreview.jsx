@@ -1,6 +1,8 @@
+'use client'
+
 import { PDFViewer } from '@react-pdf/renderer';
-import ResumePDF from './ResumePDF';
-import { resumeData } from '../../data/resume';
+import ResumePDF from '@/components/pdf/ResumePDF';
+import { resumeData } from '@/data/resume';
 
 const ResumePreview = () => {
   return (

@@ -1,6 +1,8 @@
+'use client'
+
 import { motion } from 'framer-motion'
 import { FaSun, FaMoon } from 'react-icons/fa'
-import { useTheme } from '../../hooks/useTheme'
+import { useTheme } from '@/hooks/useTheme'
 
 const DarkModeToggle = () => {
   const { theme, toggleTheme } = useTheme()

@@ -1,3 +1,5 @@
+'use client'
+
 import { motion } from 'framer-motion'
 import * as FaIcons from 'react-icons/fa'
 import * as SiIcons from 'react-icons/si'

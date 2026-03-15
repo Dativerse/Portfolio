@@ -1,7 +1,9 @@
+'use client'
+
 import { motion } from 'framer-motion'
-import AnimatedSection from '../ui/AnimatedSection'
-import SolutionCard from '../ui/SolutionCard'
-import { solutions } from '../../data/solutions'
+import AnimatedSection from '@/components/ui/AnimatedSection'
+import SolutionCard from '@/components/ui/SolutionCard'
+import { solutions } from '@/data/solutions'
 
 const Projects = () => {
 

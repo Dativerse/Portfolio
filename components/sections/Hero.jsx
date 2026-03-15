@@ -1,7 +1,10 @@
+'use client'
+
 import { motion } from 'framer-motion'
-import { FaChevronDown, FaLinkedin, FaEnvelope, FaCode } from 'react-icons/fa'
-import { personalInfo } from '../../data/personal'
-import DownloadResumeButton from '../ui/DownloadResumeButton'
+import Image from 'next/image'
+import { FaChevronDown, FaLinkedin, FaEnvelope } from 'react-icons/fa'
+import { personalInfo } from '@/data/personal'
+import DownloadResumeButton from '@/components/ui/DownloadResumeButton'
 
 const Hero = () => {
   const scrollToSection = (sectionId) => {
@@ -45,12 +48,15 @@ const Hero = () => {
 
             {/* Animated gradient avatar */}
             <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full p-1 bg-gradient-to-r from-primary via-accent-purple to-accent-pink animate-gradient-rotate shadow-premium-lg">
-              <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/20 via-accent-purple/30 to-accent-pink/20 dark:from-primary/30 dark:via-accent-purple/40 dark:to-accent-pink/30 backdrop-blur-sm flex items-center justify-center overflow-hidden">
-                {/* Inner animated gradient */}
-                <div className="absolute inset-2 rounded-full bg-gradient-to-tr from-primary via-accent-purple to-accent-pink opacity-20 animate-spin-slow" />
-
-                {/* Icon */}
-                <FaCode className="relative text-5xl md:text-6xl text-primary dark:text-primary-light drop-shadow-lg" />
+              <div className="w-full h-full rounded-full overflow-hidden">
+                <Image
+                  src="/avatar.webp"
+                  alt={personalInfo.name}
+                  width={192}
+                  height={192}
+                  className="w-full h-full object-cover"
+                  priority
+                />
               </div>
             </div>
           </motion.div>

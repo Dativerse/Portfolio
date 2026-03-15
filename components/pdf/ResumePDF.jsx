@@ -1,3 +1,5 @@
+'use client'
+
 import { Document, Page, Text, View, StyleSheet, Link, Svg, Path, Rect, Font } from '@react-pdf/renderer';
 
 // Register Roboto font (supports Vietnamese)

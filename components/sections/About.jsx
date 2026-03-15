@@ -1,7 +1,10 @@
-import { FaAward, FaBriefcase, FaLaptopCode } from 'react-icons/fa'
-import AnimatedSection from '../ui/AnimatedSection'
-import DownloadResumeButton from '../ui/DownloadResumeButton'
-import { personalInfo } from '../../data/personal'
+'use client'
+
+import Image from 'next/image'
+import { FaAward, FaBriefcase } from 'react-icons/fa'
+import AnimatedSection from '@/components/ui/AnimatedSection'
+import DownloadResumeButton from '@/components/ui/DownloadResumeButton'
+import { personalInfo } from '@/data/personal'
 
 const About = () => {
   return (
@@ -34,12 +37,14 @@ const About = () => {
 
               {/* Animated gradient container */}
               <div className="relative aspect-square rounded-3xl p-1 bg-gradient-to-br from-primary via-accent-purple to-accent-pink animate-gradient-rotate shadow-premium-lg">
-                <div className="w-full h-full rounded-[1.35rem] bg-gradient-to-br from-primary/10 via-accent-purple/20 to-accent-pink/10 dark:from-primary/20 dark:via-accent-purple/30 dark:to-accent-pink/20 backdrop-blur-sm flex items-center justify-center overflow-hidden">
-                  {/* Inner animated gradient */}
-                  <div className="absolute inset-4 rounded-2xl bg-gradient-to-tr from-primary via-accent-purple to-accent-pink opacity-10 animate-spin-slow" />
-
-                  {/* Icon */}
-                  <FaLaptopCode className="relative text-8xl md:text-9xl text-primary dark:text-primary-light drop-shadow-lg" />
+                <div className="w-full h-full rounded-[1.35rem] overflow-hidden">
+                  <Image
+                    src="/avatar.webp"
+                    alt={personalInfo.name}
+                    width={500}
+                    height={500}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
 

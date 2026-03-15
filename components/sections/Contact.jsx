@@ -1,7 +1,9 @@
+'use client'
+
 import { FaLinkedin, FaEnvelope } from 'react-icons/fa'
-import AnimatedSection from '../ui/AnimatedSection'
-import DownloadResumeButton from '../ui/DownloadResumeButton'
-import { personalInfo } from '../../data/personal'
+import AnimatedSection from '@/components/ui/AnimatedSection'
+import DownloadResumeButton from '@/components/ui/DownloadResumeButton'
+import { personalInfo } from '@/data/personal'
 
 const Contact = () => {
   const socialLinks = [
@@ -28,7 +30,7 @@ const Contact = () => {
         <AnimatedSection animation="fade-in">
           <div className="text-center mb-16">
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 dark:bg-primary/20 border border-primary/20 dark:border-primary/30 text-primary dark:text-primary-light text-sm font-medium mb-4">
-              Let's Connect
+              Let&apos;s Connect
             </span>
             <h2 className="text-4xl md:text-6xl font-bold mb-6">
               <span className="bg-gradient-to-r from-light-text-primary via-primary to-accent-purple dark:from-dark-text-primary dark:via-primary-light dark:to-accent-purple bg-clip-text text-transparent">

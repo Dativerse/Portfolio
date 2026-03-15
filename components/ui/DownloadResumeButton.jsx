@@ -1,12 +1,14 @@
+'use client'
+
 import { useState } from 'react';
 import { pdf } from '@react-pdf/renderer';
 import { HiDownload, HiExternalLink } from 'react-icons/hi';
-import ResumePDF from '../pdf/ResumePDF';
-import { resumeData } from '../../data/resume';
+import ResumePDF from '@/components/pdf/ResumePDF';
+import { resumeData } from '@/data/resume';
 
 const DownloadResumeButton = ({ className = '' }) => {
   const [isGenerating, setIsGenerating] = useState(false);
-  const showPreview = import.meta.env.VITE_SHOW_RESUME_PREVIEW === 'true';
+  const showPreview = process.env.NEXT_PUBLIC_SHOW_RESUME_PREVIEW === 'true';
 
   const handleDownload = async () => {
     try {

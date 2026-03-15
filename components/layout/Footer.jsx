@@ -1,5 +1,7 @@
+'use client'
+
 import { FaLinkedin, FaEnvelope } from 'react-icons/fa'
-import { personalInfo } from '../../data/personal'
+import { personalInfo } from '@/data/personal'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()

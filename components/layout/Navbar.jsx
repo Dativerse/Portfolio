@@ -1,7 +1,9 @@
+'use client'
+
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaBars, FaTimes } from 'react-icons/fa'
-import DarkModeToggle from '../ui/DarkModeToggle'
+import DarkModeToggle from '@/components/ui/DarkModeToggle'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -37,6 +39,7 @@ const Navbar = () => {
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const scrollToSection = (sectionId) => {

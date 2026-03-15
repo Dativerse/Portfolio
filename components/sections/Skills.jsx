@@ -1,6 +1,8 @@
-import AnimatedSection from '../ui/AnimatedSection'
-import SkillCard from '../ui/SkillCard'
-import { skillCategories } from '../../data/skills'
+'use client'
+
+import AnimatedSection from '@/components/ui/AnimatedSection'
+import SkillCard from '@/components/ui/SkillCard'
+import { skillCategories } from '@/data/skills'
 
 const Skills = () => {
   return (
