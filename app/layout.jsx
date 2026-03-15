@@ -3,20 +3,20 @@ import { ThemeProvider } from '@/context/ThemeContext'
 
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'),
-  title: 'Full Stack Software Engineer',
-  description: 'Full Stack Software Engineer Portfolio - Showcasing modern web applications built with React, Node.js, and cutting-edge technologies.',
-  keywords: 'software engineer, full stack developer, web development, React, Node.js, portfolio',
+  title: 'Product Software Engineer',
+  description: 'Product Software Engineer Portfolio - Showcasing modern web applications built with React, Node.js, and cutting-edge technologies.',
+  keywords: 'software engineer, Product developer, web development, React, Node.js, portfolio',
   authors: [{ name: 'Victor Nguyen' }],
   openGraph: {
     type: 'website',
-    title: 'Victor Nguyen - Full Stack Software Engineer',
-    description: 'Full Stack Software Engineer Portfolio - Showcasing modern web applications built with React, Node.js, and cutting-edge technologies.',
+    title: 'Victor Nguyen - Product Software Engineer',
+    description: 'Product Software Engineer Portfolio - Showcasing modern web applications built with React, Node.js, and cutting-edge technologies.',
     images: ['/og-image.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Victor Nguyen - Full Stack Software Engineer',
-    description: 'Full Stack Software Engineer Portfolio - Showcasing modern web applications built with React, Node.js, and cutting-edge technologies.',
+    title: 'Victor Nguyen - Product Software Engineer',
+    description: 'Product Software Engineer Portfolio - Showcasing modern web applications built with React, Node.js, and cutting-edge technologies.',
     images: ['/og-image.jpg'],
   },
   icons: {

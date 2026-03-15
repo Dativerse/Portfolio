@@ -1,4 +1,4 @@
-# Victor Nguyen - Full Stack Software Engineer Portfolio
+# Victor Nguyen - Product Software Engineer Portfolio
 
 A modern, responsive portfolio website built with React, Vite, Tailwind CSS, and Framer Motion.
 

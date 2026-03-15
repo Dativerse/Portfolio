@@ -1,6 +1,6 @@
 export const personalInfo = {
   name: "Nguyễn Văn Đạt",
-  title: "Full Stack Product Software Engineer",
+  title: "Product Product Software Engineer",
   tagline: "Building modern web applications with cutting-edge technologies",
   email: "dativerse@gmail.com",
   phone: "+84 775702201",
