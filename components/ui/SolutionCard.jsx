@@ -1,82 +1,109 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { useState } from 'react'
 
 const SolutionCard = ({ solution, index }) => {
-  const [isHovered, setIsHovered] = useState(false)
+  const [hoveredTech, setHoveredTech] = useState(null)
+
+  // Tech explanations for architecture diagram feel
+  const techExplanations = {
+    'React': 'Component-based UI for maintainability',
+    'Next.js': 'SSR/SSG for performance & SEO',
+    'Node.js': 'JavaScript runtime for full-stack consistency',
+    '.NET': 'Enterprise-grade backend with high performance',
+    'Express': 'Minimal, flexible backend framework',
+    'PostgreSQL': 'ACID-compliant relational database',
+    'MongoDB': 'Document store for flexible schemas',
+    'Redis': 'In-memory cache for low-latency reads',
+    'Kafka': 'Distributed streaming for high-throughput events',
+    'Kubernetes': 'Container orchestration for scalability',
+    'Docker': 'Containerization for consistent deployments',
+    'AWS': 'Scalable cloud infrastructure',
+    'TypeScript': 'Type safety for large codebases',
+    'GraphQL': 'Flexible API queries, reduced over-fetching',
+    'REST API': 'Standard HTTP interface for integrations',
+    'Tailwind': 'Utility-first CSS for rapid development',
+    'Jest': 'Unit & integration testing framework',
+    'CI/CD': 'Automated testing and deployment pipeline'
+  }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: index * 0.1 }}
-      onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
-      className="group card-premium hover:border-primary/30 dark:hover:border-primary/40 h-full"
-    >
-      {/* Icon */}
-      <div className={`inline-flex p-4 rounded-2xl ${solution.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
-        <solution.icon className="w-8 h-8" />
+    <div className="card-blueprint h-full flex flex-col">
+      {/* Header */}
+      <div className="flex items-start justify-between mb-4">
+        <div className="flex items-center gap-3">
+          <span className="font-mono text-accent text-sm">
+            [{String(index + 1).padStart(2, '0')}]
+          </span>
+          <div className="p-2 border border-light-border dark:border-dark-border">
+            <solution.icon className="w-5 h-5 text-light-text-secondary dark:text-slate-400" />
+          </div>
+        </div>
+        <span className="font-mono text-xs text-light-text-tertiary dark:text-slate-400">
+          module
+        </span>
       </div>
 
       {/* Title */}
-      <h3 className="text-2xl font-bold text-light-text-primary dark:text-dark-text-primary mb-3 group-hover:text-primary dark:group-hover:text-primary-light transition-colors">
+      <h3 className="font-mono font-semibold text-lg text-light-text-primary dark:text-slate-200 mb-2">
         {solution.title}
       </h3>
 
       {/* Description */}
-      <p className="text-light-text-secondary dark:text-dark-text-secondary mb-6 leading-relaxed">
+      <p className="text-sm text-light-text-secondary dark:text-slate-400 mb-4 leading-relaxed">
         {solution.description}
       </p>
 
-      {/* Technical Stack */}
-      <div className="mb-6">
-        <h4 className="text-sm font-semibold text-light-text-primary dark:text-dark-text-primary mb-3 flex items-center gap-2">
-          <span className="w-1 h-4 bg-primary rounded-full"></span>
-          Technical Implementation
-        </h4>
-        <div className="flex flex-wrap gap-2">
-          {solution.stack.map((tech, i) => (
-            <span
-              key={i}
-              className="skill-badge text-xs"
-            >
-              {tech}
-            </span>
-          ))}
+      {/* Architecture diagram - Tech Stack */}
+      <div className="mb-4">
+        <div className="flex items-center gap-2 mb-3">
+          <span className="w-4 h-px bg-accent"></span>
+          <span className="font-mono text-xs text-accent uppercase tracking-wider">stack</span>
+        </div>
+
+        <div className="relative">
+          <div className="flex flex-wrap gap-1">
+            {solution.stack.map((tech, i) => (
+              <div
+                key={i}
+                className="group relative"
+                onMouseEnter={() => setHoveredTech(tech)}
+                onMouseLeave={() => setHoveredTech(null)}
+              >
+                <span className="tech-tag cursor-help">
+                  {tech}
+                </span>
+
+                {/* Tooltip */}
+                {hoveredTech === tech && techExplanations[tech] && (
+                  <div className="absolute z-10 bottom-full left-0 mb-2 px-2 py-1 bg-dark-card border border-accent/30 text-accent text-xs font-mono whitespace-nowrap">
+                    {techExplanations[tech]}
+                    <div className="absolute top-full left-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-accent/30"></div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* Key Features */}
-      <div>
-        <h4 className="text-sm font-semibold text-light-text-primary dark:text-dark-text-primary mb-3 flex items-center gap-2">
-          <span className="w-1 h-4 bg-accent-purple rounded-full"></span>
-          Key Capabilities
-        </h4>
-        <ul className="space-y-2">
+      {/* Features as system capabilities */}
+      <div className="flex-grow">
+        <div className="flex items-center gap-2 mb-3">
+          <span className="w-4 h-px bg-light-border dark:bg-dark-border"></span>
+          <span className="font-mono text-xs text-light-text-tertiary dark:text-slate-400 uppercase tracking-wider">capabilities</span>
+        </div>
+
+        <ul className="space-y-1.5">
           {solution.features.map((feature, i) => (
-            <li key={i} className="flex items-start gap-2 text-sm text-light-text-tertiary dark:text-dark-text-tertiary">
-              <svg className="w-4 h-4 text-primary dark:text-primary-light mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-              </svg>
-              {feature}
+            <li key={i} className="flex items-start gap-2 text-xs text-light-text-secondary dark:text-slate-400 font-mono">
+              <span className="text-accent mt-0.5">→</span>
+              <span>{feature}</span>
             </li>
           ))}
         </ul>
       </div>
-
-      {/* Hover indicator */}
-      <motion.div
-        animate={{ x: isHovered ? 4 : 0, opacity: isHovered ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
-        className="absolute top-6 right-6"
-      >
-        <svg className="w-6 h-6 text-primary dark:text-primary-light" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-        </svg>
-      </motion.div>
-    </motion.div>
+    </div>
   )
 }
 

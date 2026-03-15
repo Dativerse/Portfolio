@@ -1,34 +1,34 @@
-import { FaShoppingCart, FaRocket, FaCogs, FaUsers, FaLock, FaMobile } from 'react-icons/fa'
+import { FaChartLine, FaWallet, FaCogs, FaUsers, FaLock } from 'react-icons/fa'
 
 export const solutions = [
   {
     id: 1,
-    title: 'E-Commerce Platforms',
-    description: 'Build scalable online stores with payment processing, inventory management, and real-time order tracking. Complete solutions from product catalog to checkout.',
-    icon: FaShoppingCart,
+    title: 'Prediction Market',
+    description: 'Scalable prediction market platforms with high-volume transactions, real-time event data, and probability-based pricing. End-to-end from event markets to settlement.',
+    icon: FaChartLine,
     color: 'bg-gradient-to-br from-primary to-accent-purple text-white',
-    stack: ['React', 'Node.js', 'MongoDB', 'Stripe API', 'Redis', 'AWS S3'],
+    stack: ['React', '.NET', 'PostgreSQL', 'Kafka', 'Redis', 'Kubernetes'],
     features: [
-      'Secure payment gateway integration',
-      'Real-time inventory synchronization',
-      'Shopping cart with session management',
-      'Admin dashboard for order management',
-      'Responsive mobile-first design'
+      'Secure wallet and transaction processing',
+      'Real-time event and probability data synchronization',
+      'Market selection and session management',
+      'Backoffice and operator portals for platform operations',
+      'Scalable microservices architecture with event-driven processing'
     ]
   },
   {
     id: 2,
-    title: 'Real-Time Applications',
-    description: 'Develop interactive applications with live updates, chat systems, and collaborative features. WebSocket-based architecture for instant data synchronization.',
-    icon: FaRocket,
+    title: 'Payment Wallet',
+    description: 'Secure digital wallet systems with multi-currency support, real-time balance tracking, and seamless payment processing.',
+    icon: FaWallet,
     color: 'bg-gradient-to-br from-accent-cyan to-blue-600 text-white',
-    stack: ['React', 'Socket.io', 'Express', 'PostgreSQL', 'Docker', 'Nginx'],
+    stack: ['React', '.NET', 'PostgreSQL', 'Redis', 'Kafka', 'Docker'],
     features: [
-      'Live chat and messaging systems',
-      'Real-time notifications and alerts',
-      'Collaborative editing and sharing',
-      'Presence detection and status updates',
-      'Scalable WebSocket connections'
+      'Multi-currency wallet management',
+      'Secure deposit and withdrawal flows',
+      'Real-time balance and transaction updates',
+      'Payment gateway integrations',
+      'Transaction history and reporting'
     ]
   },
   {
@@ -74,21 +74,6 @@ export const solutions = [
       'Message queues and event-driven architecture',
       'Containerized deployment with orchestration',
       'Distributed caching and data consistency'
-    ]
-  },
-  {
-    id: 6,
-    title: 'Progressive Web Apps',
-    description: 'Build mobile-first applications that work offline, send push notifications, and provide native app-like experiences. Cross-platform solutions with a single codebase.',
-    icon: FaMobile,
-    color: 'bg-gradient-to-br from-indigo-600 to-purple-600 text-white',
-    stack: ['React', 'Service Workers', 'IndexedDB', 'PWA', 'Workbox', 'Firebase'],
-    features: [
-      'Offline functionality with caching',
-      'Push notification integration',
-      'App-like navigation and gestures',
-      'Install to home screen capability',
-      'Background sync for data updates'
     ]
   }
 ]

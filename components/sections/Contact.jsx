@@ -6,63 +6,58 @@ import DownloadResumeButton from '@/components/ui/DownloadResumeButton'
 import { personalInfo } from '@/data/personal'
 
 const Contact = () => {
-  const socialLinks = [
+  const endpoints = [
     {
       icon: FaLinkedin,
       url: personalInfo.social.linkedin,
       label: 'LinkedIn',
-      color: 'from-blue-600 to-blue-800'
+      protocol: 'https://'
     },
     {
       icon: FaEnvelope,
       url: personalInfo.social.email,
       label: 'Email',
-      color: 'from-primary to-accent-purple'
+      protocol: 'mailto:'
     }
   ]
 
   return (
-    <section id="contact" className="section-padding relative overflow-hidden bg-white dark:bg-dark-elevated">
-      {/* Background Elements */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/5 dark:bg-primary/10 rounded-full blur-3xl" />
-
-      <div className="container-custom relative z-10">
+    <section id="contact" className="section-padding bg-light-card dark:bg-dark-card blueprint-grid">
+      <div className="container-custom">
         <AnimatedSection animation="fade-in">
-          <div className="text-center mb-16">
-            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 dark:bg-primary/20 border border-primary/20 dark:border-primary/30 text-primary dark:text-primary-light text-sm font-medium mb-4">
-              Let&apos;s Connect
-            </span>
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-light-text-primary via-primary to-accent-purple dark:from-dark-text-primary dark:via-primary-light dark:to-accent-purple bg-clip-text text-transparent">
-                Open to Opportunities
-              </span>
+          <div className="mb-12">
+            <span className="section-label">connection</span>
+            <h2 className="text-2xl md:text-4xl font-mono font-bold text-light-text-primary dark:text-slate-200 mb-4">
+              await contact()
             </h2>
-            <p className="text-xl text-light-text-secondary dark:text-dark-text-secondary max-w-2xl mx-auto mb-12">
-              Currently seeking new opportunities to leverage my skills and contribute to innovative projects.
+            <p className="text-light-text-secondary dark:text-slate-400 max-w-xl">
+              Ready to architect your next project. Open for full-time positions, contract work, and interesting collaborations.
             </p>
           </div>
         </AnimatedSection>
 
-        {/* Social Links Grid */}
+        {/* Connection endpoints */}
         <AnimatedSection animation="fade-up" delay={0.2}>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {socialLinks.map((social, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md mb-12">
+            {endpoints.map((endpoint, index) => (
               <a
                 key={index}
-                href={social.url}
+                href={endpoint.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group card-premium hover:border-primary/30 dark:hover:border-primary/40 text-center"
+                className="group card-blueprint flex items-center gap-4"
               >
-                <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${social.color} text-white mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <social.icon className="w-8 h-8" />
+                <div className="p-3 border border-light-border dark:border-dark-border group-hover:border-accent transition-colors">
+                  <endpoint.icon className="w-5 h-5 text-light-text-secondary dark:text-slate-400 group-hover:text-accent transition-colors" />
                 </div>
-                <h3 className="text-lg font-semibold text-light-text-primary dark:text-dark-text-primary group-hover:text-primary dark:group-hover:text-primary-light transition-colors mb-2">
-                  {social.label}
-                </h3>
-                <p className="text-sm text-light-text-tertiary dark:text-dark-text-tertiary">
-                  Connect on {social.label}
-                </p>
+                <div className="font-mono">
+                  <div className="text-sm text-light-text-primary dark:text-slate-200 group-hover:text-accent transition-colors">
+                    {endpoint.label}
+                  </div>
+                  <div className="text-xs text-light-text-tertiary dark:text-slate-400">
+                    {endpoint.protocol}
+                  </div>
+                </div>
               </a>
             ))}
           </div>
@@ -70,15 +65,22 @@ const Contact = () => {
 
         {/* CTA */}
         <AnimatedSection animation="fade-up" delay={0.4}>
-          <div className="text-center mt-16">
-            <div className="inline-flex flex-col sm:flex-row gap-4">
-              <a
-                href={`mailto:${personalInfo.email}`}
-                className="btn-primary"
-              >
-                <span className="relative z-10">Send Email</span>
-              </a>
-              <DownloadResumeButton className="!bg-transparent border-2 border-primary text-primary hover:!bg-primary hover:text-white dark:border-primary-light dark:text-primary-light dark:hover:!bg-primary-light dark:hover:text-dark-bg" />
+          <div className="flex flex-col sm:flex-row gap-3">
+            <a
+              href={`mailto:${personalInfo.email}`}
+              className="btn-primary"
+            >
+              send_message()
+            </a>
+            <DownloadResumeButton />
+          </div>
+        </AnimatedSection>
+
+        {/* Connection status */}
+        <AnimatedSection animation="fade-up" delay={0.6}>
+          <div className="mt-12 pt-8 border-t border-light-border dark:border-dark-border">
+            <div className="font-mono text-xs text-light-text-tertiary dark:text-slate-400">
+              <span className="text-accent">$</span> response_time: <span className="text-accent">&lt; 24h</span>
             </div>
           </div>
         </AnimatedSection>

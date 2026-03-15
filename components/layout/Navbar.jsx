@@ -11,18 +11,16 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home')
 
   const navLinks = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'projects', label: 'Solutions' },
-    { id: 'contact', label: 'Connect' }
+    { id: 'home', label: 'home' },
+    { id: 'skills', label: 'skills' },
+    { id: 'projects', label: 'projects' },
+    { id: 'contact', label: 'contact' }
   ]
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
 
-      // Update active section based on scroll position
       const sections = navLinks.map(link => document.getElementById(link.id))
       const scrollPosition = window.scrollY + 100
 
@@ -55,7 +53,6 @@ const Navbar = () => {
     setIsMobileMenuOpen(false)
   }
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden'
@@ -70,64 +67,54 @@ const Navbar = () => {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/80 dark:bg-dark-bg/80 backdrop-blur-xl border-b border-light-border/50 dark:border-dark-border/50 shadow-lg'
+          ? 'bg-light-bg/95 dark:bg-dark-bg/95 backdrop-blur-sm border-b border-light-border dark:border-dark-border'
           : 'bg-transparent'
       }`}
     >
       <div className="container-custom">
-        <div className="flex items-center justify-between h-20 px-4 md:px-8">
+        <div className="flex items-center justify-between h-16 px-4 md:px-8">
           {/* Logo */}
-          <motion.button
-            className="text-2xl font-bold bg-gradient-to-r from-primary to-accent-purple bg-clip-text text-transparent cursor-pointer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <button
+            className="font-mono text-sm text-light-text-primary dark:text-slate-200 cursor-pointer hover:text-accent transition-colors"
             onClick={() => scrollToSection('home')}
           >
-            Portfolio
-          </motion.button>
+            <span className="text-accent">~/</span>portfolio
+          </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-2">
+          <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+                className={`px-3 py-1.5 font-mono text-sm transition-colors ${
                   activeSection === link.id
-                    ? 'text-primary dark:text-primary-light bg-primary/10 dark:bg-primary/20'
-                    : 'text-light-text-secondary dark:text-dark-text-secondary hover:text-primary dark:hover:text-primary-light hover:bg-primary/5 dark:hover:bg-primary/10'
+                    ? 'text-accent'
+                    : 'text-light-text-secondary dark:text-slate-400 hover:text-accent'
                 }`}
               >
-                {link.label}
-                {activeSection === link.id && (
-                  <motion.div
-                    layoutId="activeSection"
-                    className="absolute inset-0 bg-primary/10 dark:bg-primary/20 rounded-lg -z-10"
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                  />
-                )}
+                {activeSection === link.id ? `[${link.label}]` : link.label}
               </button>
             ))}
-            <div className="ml-2 pl-2 border-l border-light-border dark:border-dark-border">
+            <div className="ml-3 pl-3 border-l border-light-border dark:border-dark-border">
               <DarkModeToggle />
             </div>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center gap-4">
+          <div className="md:hidden flex items-center gap-3">
             <DarkModeToggle />
-            <motion.button
+            <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 rounded-lg text-light-text-secondary dark:text-dark-text-secondary hover:text-primary dark:hover:text-primary-light hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors"
+              className="p-2 text-light-text-secondary dark:text-slate-400 hover:text-accent transition-colors"
               aria-label="Toggle menu"
-              whileTap={{ scale: 0.95 }}
             >
               {isMobileMenuOpen ? (
-                <FaTimes className="w-6 h-6" />
+                <FaTimes className="w-4 h-4" />
               ) : (
-                <FaBars className="w-6 h-6" />
+                <FaBars className="w-4 h-4" />
               )}
-            </motion.button>
+            </button>
           </div>
         </div>
       </div>
@@ -136,39 +123,34 @@ const Navbar = () => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>
-            {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/20 dark:bg-black/40 backdrop-blur-sm md:hidden"
+              className="fixed inset-0 bg-dark-bg/80 md:hidden"
               onClick={() => setIsMobileMenuOpen(false)}
             />
 
-            {/* Menu Panel */}
             <motion.div
               initial={{ opacity: 0, x: '100%' }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: '100%' }}
-              transition={{ type: "spring", bounce: 0, duration: 0.4 }}
-              className="fixed top-20 right-0 bottom-0 w-80 bg-light-card/95 dark:bg-dark-card/95 backdrop-blur-xl border-l border-light-border dark:border-dark-border md:hidden shadow-premium-lg"
+              transition={{ type: "spring", bounce: 0, duration: 0.3 }}
+              className="fixed top-16 right-0 bottom-0 w-64 bg-light-card dark:bg-dark-card border-l border-light-border dark:border-dark-border md:hidden"
             >
-              <div className="flex flex-col p-8 gap-2">
-                {navLinks.map((link, index) => (
-                  <motion.button
+              <div className="flex flex-col p-6 gap-1">
+                {navLinks.map((link) => (
+                  <button
                     key={link.id}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.05 }}
                     onClick={() => scrollToSection(link.id)}
-                    className={`text-left px-4 py-3 text-lg font-medium rounded-xl transition-all duration-200 ${
+                    className={`text-left px-3 py-2 font-mono text-sm transition-colors ${
                       activeSection === link.id
-                        ? 'text-primary dark:text-primary-light bg-primary/10 dark:bg-primary/20'
-                        : 'text-light-text-secondary dark:text-dark-text-secondary hover:bg-primary/5 dark:hover:bg-primary/10'
+                        ? 'text-accent'
+                        : 'text-light-text-secondary dark:text-slate-400'
                     }`}
                   >
-                    {link.label}
-                  </motion.button>
+                    <span className="text-accent/60">&gt;</span> {link.label}
+                  </button>
                 ))}
               </div>
             </motion.div>
