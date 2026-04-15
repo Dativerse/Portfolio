@@ -13,7 +13,7 @@ export const resumeData = {
   },
 
   // Professional summary for ATS keyword matching and HR quick scan
-  summary: "Product Software Engineer with 3+ years of experience building scalable web applications and payment systems. Skilled in improving and refactoring microservices architectures, optimizing legacy codebases, and leveraging AI-assisted development workflows to enhance productivity. AWS certified with expertise in React and .NET.",
+  summary: "Product Software Engineer with full-stack expertise spanning Back-end, Front-end, and DevOps. Experience ranges from legacy monolithic systems to modern monorepo architectures. Specialized in delivering end-to-end solutions for SaaS products and payment gateways. Selected as pioneer engineer at both companies to work on experimental projects with startup agility and product company standards. AWS certified with expertise in .NET, React, and microservices optimization.",
 
   education: [
     {
@@ -36,9 +36,9 @@ export const resumeData = {
       website: null,
       achievements: [
         "Engineered fullstack payment gateway platform serving 5+ countries with multi-currency support using .NET, React, and PostgreSQL",
-        "Integrated with third-party providers reducing payment failures by implementing retry logic and fallback mechanisms",
-        "Developed and maintained both customer-facing payment portal and internal admin dashboard, enabling end-to-end transaction management",
-        "Enhanced development workflow by creating custom CLI commands, building AI agents for task automation, and integrating AI-assisted features into projects"
+        "Designed database schemas, data flows, and integrated third-party payment providers with team knowledge sharing for high availability",
+        "Developed both customer-facing payment portal and internal admin dashboard, delivering end-to-end solutions",
+        "Created internal tools, CLI commands, and AI agents for task automation to enhance development workflow"
       ]
     },
     {
@@ -48,9 +48,10 @@ export const resumeData = {
       startDate: "Mar 2023",
       endDate: "Jul 2025",
       achievements: [
-        "Selected for pioneers team to deliver high-risk, experimental products; successfully shipped 3 projects to production",
-        "Migrated monolithic MVC to microservices architecture, reducing deployment time by 60% and enabling independent team scaling",
-        "Modernized legacy jQuery frontend to React SPA with code-splitting, reducing initial load time by 40% and improving Core Web Vitals",
+        "Selected as pioneer engineer to deliver experimental SaaS products with startup agility and product company standards; shipped 3 projects to production",
+        "Worked on both client-side and back-office systems, delivering end-to-end solutions with good mindset for admins, clients, and full stack",
+        "Migrated legacy products to modern .NET, created internal tools/scripts, and built smoke tests and load testing suites",
+        "Operated in Agile methodology with Scrum, participating in sprint planning, daily standups, client sync meetings, and retrospectives"
       ]
     }
   ],
@@ -72,28 +73,31 @@ export const resumeData = {
     },
     {
       category: "Tools & Practices",
-      items: ["Git", "Agile/Scrum", "Microservices", "System Design", "Unit Testing", "Performance Optimization"]
+      items: ["Git", "Agile/Scrum", "Microservices", "System Design", "Unit Testing", "Pair Programming"]
     }
   ],
 
   projects: [
     {
       title: "Cashquora",
-      description: "Payment gateway platform serving customers across multiple countries",
-      technologies: [".NET", "PostgreSQL", "Redis", "Kubernetes", "React"],
+      description: "Payment gateway platform with multi-currency support, distributed database architecture, and AI-assisted development workflow",
+      technologies: [".NET", "PostgreSQL", "Redis", "Kubernetes", "React", "AI Agents"],
       period: "Sep 2025 - Jan 2026",
       achievements: [
-        "Developed fullstack payment features with third-party provider integration",
-        "Built and maintained customer-facing portal and internal admin dashboard"
+        "Developed fullstack payment gateway features with third-party provider integration serving 5+ countries",
+        "Implemented distributed database architecture with PostgreSQL and Redis for high availability transactions",
+        "Built customer-facing payment portal and internal admin dashboard for end-to-end transaction management",
+        "Leveraged AI-assisted development flow with custom AI agents and CLI tools to accelerate delivery"
       ]
     },
     {
       title: "S1",
-      description: "Experimental B2B product offering technology-agnostic solutions for non-technical customers",
-      technologies: [".NET", "React", "Next.js", "Kubernetes", "Microservices"],
+      description: "Microservices B2B product with domain-driven database separation, offering technology-agnostic solutions for non-technical customers",
+      technologies: [".NET", "React", "Next.js", "Kubernetes", "Microservices", "Message Queues"],
       period: "Aug 2024 - Feb 2025",
       achievements: [
-        "Integrated core business logic to other products via API and message queues, enabling new use cases",
+        "Built complete microservices architecture with comprehensive database separation following domain-driven design",
+        "Integrated core business logic to other products via API and message queues, enabling cross-service communication",
         "Built internal tools and performed load testing to optimize system performance"
       ]
     },
