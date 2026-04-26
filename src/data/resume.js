@@ -13,7 +13,7 @@ export const resumeData = {
   },
 
   // Professional summary for ATS keyword matching and HR quick scan
-  summary: "Product Software Engineer with 3+ years of experience building scalable web applications and payment systems. Skilled in improving and refactoring microservices architectures, optimizing legacy codebases, and leveraging AI-assisted development workflows to enhance productivity. AWS certified with expertise in React and .NET.",
+  summary: "Product Software Engineer with 4+ years of experience building scalable web applications and payment systems. Skilled in improving and refactoring microservices architectures, optimizing legacy codebases, and leveraging AI-assisted development workflows to enhance productivity. AWS certified with expertise in React and .NET.",
 
   education: [
     {
@@ -45,7 +45,7 @@ export const resumeData = {
       company: "Nexcel Solutions",
       position: "Fullstack Software Engineer",
       location: "Ho Chi Minh City, Vietnam",
-      startDate: "Mar 2023",
+      startDate: "Apr 2022",
       endDate: "Jul 2025",
       achievements: [
         "Selected for pioneers team to deliver high-risk, experimental products; successfully shipped 3 projects to production",
@@ -101,7 +101,7 @@ export const resumeData = {
       title: "Licensee Admin Portal",
       description: "High-performance admin website for license management",
       technologies: [".NET Framework", ".NET 6", "React", "Webpack", "jQuery"],
-      period: "Oct 2023 - Aug 2024",
+      period: "Oct 2022 - Aug 2024",
       achievements: [
         "Migrated MVC to 3-layer architecture and separated codebase into micro-sites (SOA)",
         "Applied Micro Frontend architecture with React lazy-loading"
