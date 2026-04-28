@@ -60,7 +60,7 @@ export const resumeData = {
   skills: [
     {
       category: "Frameworks",
-      items: [".NET", "React", "Next.js", "Node.js", "Express", "Tailwind CSS", "REST APIs"]
+      items: [".NET", "React", "Next.js", "Node.js", "Express", "Tailwind CSS", "REST APIs", "Kafka"]
     },
     {
       category: "Languages",
