@@ -45,10 +45,10 @@ export const resumeData = {
       company: "Nexcel Solutions",
       position: "Fullstack Software Engineer",
       location: "Ho Chi Minh City, Vietnam",
-      startDate: "Apr 2022",
+      startDate: "Apr 2023",
       endDate: "Jul 2025",
       achievements: [
-        "Selected as pioneer engineer to deliver experimental SaaS products with startup agility and product company standards; shipped 3 projects to production",
+        "Selected as pioneer engineer to deliver experimental SaaS products with startup agility and product company standards",
         "Worked on both client-side and back-office systems, delivering end-to-end solutions with good mindset for admins, clients, and full stack",
         "Migrated legacy products to modern .NET, created internal tools/scripts, and built smoke tests and load testing suites",
         "Operated in Agile methodology with Scrum, participating in sprint planning, daily standups, client sync meetings, and retrospectives"
@@ -105,7 +105,7 @@ export const resumeData = {
       title: "Licensee Admin Portal",
       description: "High-performance admin website for license management",
       technologies: [".NET Framework", ".NET 6", "React", "Webpack", "jQuery", "Angular", "SQL Server"],
-      period: "Oct 2022 - Aug 2024",
+      period: "Oct 2023 - Aug 2024",
       achievements: [
         "Migrated MVC to 3-layer architecture and separated codebase into micro-sites (SOA)",
         "Handled and developed various types of content and optimized loading performance",
