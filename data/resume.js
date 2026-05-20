@@ -32,7 +32,7 @@ export const resumeData = {
       position: "Software Engineer",
       location: "Dubai, United Arab Emirates",
       startDate: "Jul 2025",
-      endDate: "Present",
+      endDate: "Apr 2026",
       website: null,
       achievements: [
         "Engineered fullstack payment gateway platform serving 5+ countries with multi-currency support using .NET, React, and PostgreSQL",
