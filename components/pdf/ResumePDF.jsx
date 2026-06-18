@@ -300,8 +300,8 @@ const styles = StyleSheet.create({
   },
 });
 
-const ResumePDF = ({ data }) => (
-  <Document>
+const ResumePDF = ({ data, type = 'standard' }) => (
+  <Document title={`Resume - ${data.personal.name} (${type})`}>
     <Page size="A4" style={styles.page}>
       {/* Header Section */}
       <View style={styles.header}>
@@ -318,13 +318,13 @@ const ResumePDF = ({ data }) => (
             <EmailIcon />
             <Text style={styles.contactItem}>{data.personal.email}</Text>
           </View>
-          <Text style={styles.contactSeparator}>|</Text>
+          {/* <Text style={styles.contactSeparator}>|</Text>
           <View style={styles.iconLink}>
             <LinkedInIcon />
             <Link src={data.personal.linkedin} style={styles.contactLink}>
               LinkedIn
             </Link>
-          </View>
+          </View> */}
           {/* <Text style={styles.contactSeparator}>|</Text>
           <View style={styles.iconLink}>
             <GitHubIcon />
