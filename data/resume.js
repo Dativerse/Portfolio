@@ -127,7 +127,7 @@ const backendData = {
     },
     {
       company: "Nexcel Solutions",
-      position: "Software Engineer (Backend Focus)",
+      position: "Software Engineer",
       location: "Ho Chi Minh City, Vietnam",
       startDate: "Apr 2022",
       endDate: "Jul 2025",
