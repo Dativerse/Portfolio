@@ -31,10 +31,11 @@ const AnimatedSection = ({
   animation = 'fade-up',
   delay = 0,
   duration = 0.6,
-  className = ''
+  className = '',
+  threshold = 0.1
 }) => {
   const [ref, inView] = useInView({
-    threshold: 0.3,
+    threshold,
     triggerOnce: true
   })
 

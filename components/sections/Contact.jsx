@@ -7,17 +7,17 @@ import { personalInfo } from '@/data/personal'
 
 const Contact = () => {
   const endpoints = [
-    {
-      icon: FaLinkedin,
-      url: personalInfo.social.linkedin,
-      label: 'LinkedIn',
-      protocol: 'https://'
-    },
+    // {
+    //   icon: FaLinkedin,
+    //   url: personalInfo.social.linkedin,
+    //   label: 'LinkedIn',
+    //   protocol: 'https://'
+    // },
     {
       icon: FaEnvelope,
       url: personalInfo.social.email,
       label: 'Email',
-      protocol: 'mailto:'
+      protocol: `mailto:${personalInfo.email}`
     }
   ]
 
@@ -66,12 +66,12 @@ const Contact = () => {
         {/* CTA */}
         <AnimatedSection animation="fade-up" delay={0.4}>
           <div className="flex flex-col sm:flex-row gap-3">
-            <a
+            {/* <a
               href={`mailto:${personalInfo.email}`}
               className="btn-primary"
             >
               send_message()
-            </a>
+            </a> */}
             <DownloadResumeButton />
           </div>
         </AnimatedSection>
