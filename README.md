@@ -127,15 +127,6 @@ Portfolio/
 2. Drag and drop the `dist/` folder to [Netlify](https://www.netlify.com/)
 3. Add environment variables in Netlify dashboard
 
-### GitHub Pages
-
-1. Install gh-pages: `npm install -D gh-pages`
-2. Add to package.json scripts:
-```json
-"deploy": "vite build && gh-pages -d dist"
-```
-3. Run: `npm run deploy`
-
 ## License
 
 MIT License - see LICENSE file for details
