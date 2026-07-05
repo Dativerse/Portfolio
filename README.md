@@ -112,21 +112,6 @@ Portfolio/
 └── package.json
 ```
 
-## Deployment
-
-### Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Import your repository on [Vercel](https://vercel.com)
-3. Add environment variables in Vercel dashboard
-4. Deploy
-
-### Netlify
-
-1. Build the project: `npm run build`
-2. Drag and drop the `dist/` folder to [Netlify](https://www.netlify.com/)
-3. Add environment variables in Netlify dashboard
-
 ## License
 
 MIT License - see LICENSE file for details
