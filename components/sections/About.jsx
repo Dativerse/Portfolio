@@ -56,7 +56,7 @@ const About = () => {
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-light-text-primary dark:text-dark-text-primary">
-                        3+
+                        4+
                       </h3>
                       <p className="text-light-text-tertiary dark:text-dark-text-tertiary text-sm">
                         Years Experience

@@ -72,7 +72,7 @@ const Hero = () => {
             className="flex items-center gap-6 mb-8 font-mono text-sm"
           >
             <div className="flex items-center gap-2">
-              <span className="text-accent-light dark:text-accent-dark">3+</span>
+              <span className="text-accent-light dark:text-accent-dark">4+</span>
               <span className="text-light-text-tertiary dark:text-slate-400">years exp</span>
             </div>
             <span className="text-light-border dark:text-dark-border">|</span>
